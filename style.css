@@ -1,0 +1,31 @@
+/*
+NAME: Anointing Iyawe
+FILE: Style.css
+DATE: 16 February 2026
+CSS for digital business card
+*/
+body{
+    background: linear-gradient(white green black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin: 20%;
+}
+.card{
+    width: 350px;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px grey;
+    text-align: center;
+}
+.profile-img{
+    width: 120px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10%;
+}
