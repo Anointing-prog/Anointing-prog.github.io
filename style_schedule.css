@@ -1,0 +1,23 @@
+/*
+NAME: Anointing Iyawe
+File name: Assignment 3 - External CSS
+Date: 27/2/2026
+External stylesheet for the schedule table
+*/
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background: linear-gradient(#16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+h1#page-title {
+    font-family: Georgia, serif;
+    font-size: 2em;
+    color: #e2e8f0;
+    text-align: center;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
