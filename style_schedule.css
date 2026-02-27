@@ -21,3 +21,12 @@ h1#page-title {
     margin-bottom: 4px;
     letter-spacing: 1px;
 }
+
+p#subtitle {
+    text-align: center;
+    font-size: 0.85em;
+    color: #94a3b8;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-family: Arial, sans-serif;
+}
