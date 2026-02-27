@@ -30,3 +30,31 @@ p#subtitle {
     margin-bottom: 24px;
     font-family: Arial, sans-serif;
 }
+
+.table-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 3px solid #2d3a5e;
+}
+
+caption {
+    font-family: Georgia, serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #0f3460;
+    padding: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #e94560;
+}
