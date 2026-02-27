@@ -8,7 +8,7 @@ External stylesheet for the schedule table
 body {
     margin: 0;
     padding: 40px 20px;
-    background: linear-gradient(#16213e 50%, #0f3460 100%);
+    background: linear-gradient(#16213e 50%;)
     min-height: 100vh;
     font-family: Arial, sans-serif;
 }
@@ -16,7 +16,7 @@ body {
 h1#page-title {
     font-family: Georgia, serif;
     font-size: 2em;
-    color: #e2e8f0;
+    color: #3077d3;
     text-align: center;
     margin-bottom: 4px;
     letter-spacing: 1px;
@@ -25,7 +25,7 @@ h1#page-title {
 p#subtitle {
     text-align: center;
     font-size: 0.85em;
-    color: #94a3b8;
+    color: #0d1116;
     margin-top: 0;
     margin-bottom: 24px;
     font-family: Arial, sans-serif;
@@ -70,4 +70,17 @@ th, td {
 
 tr {
     border-bottom: 2px solid #2d3a5e;
+}
+
+thead th {
+    background-color: #0f3460;
+    color: #ffffff;
+    font-family: Georgia, serif;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 3px solid #e94560;
+    padding: 14px 16px;
 }
