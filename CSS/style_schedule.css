@@ -84,3 +84,56 @@ thead th {
     border-bottom: 3px solid #e94560;
     padding: 14px 16px;
 }
+
+tbody tr:hover td {
+    filter: brightness(1.15);
+    cursor: default;
+    transition: filter 0.2s ease;
+}
+
+td.break-cell {
+    background-color: #578a10;
+    color: #8a9b33;
+    font-style: italic;
+    font-size: 0.75em;
+}
+
+td.inft {
+    background-color: #0d7377;
+    color: #e0ffff;
+    font-weight: 600;
+    font-size: 0.88em;
+    border: 2px solid #14a085;
+}
+
+td.comp1218 {
+    background-color: #8b1a4a;
+    color: #ffe0ec;
+    font-weight: 600;
+    font-size: 0.88em;
+    border: 2px solid #e94560;
+}
+
+td.comp1219 {
+    background-color: #4a2080;
+    color: #ede0ff;
+    font-weight: 600;
+    font-size: 0.88em;
+    border: 2px solid #9b59b6;
+}
+
+td.gned {
+    background-color: #145a32;
+    color: #d5f5e3;
+    font-weight: 600;
+    font-size: 0.88em;
+    border: 2px solid #27ae60;
+}
+
+td.mgmt {
+    background-color: #7d5a00;
+    color: #fff8dc;
+    font-weight: 600;
+    font-size: 0.88em;
+    border: 2px solid #f39c12;
+}
