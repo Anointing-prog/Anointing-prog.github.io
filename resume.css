@@ -1,6 +1,6 @@
 /*
     Name: Anointing Iyawe
-    Course: CST*** – Web Development
+    Course:Web Development
     Assignment: Creative Resume (Part 1)
     Date: 2026-04-03
 */
@@ -200,6 +200,105 @@ body {
     background: linear-gradient(90deg, #38bdf8, #a855f7);
     transition: width 1.2s ease-out;
 }
+/* Pill list */
+.pill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.pill-list li {
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(30, 64, 175, 0.6);
+    font-size: 0.8rem;
+}
+
+/* Cards */
+.card {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.9);
+    border-color: #38bdf8;
+}
+
+.meta {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 0.4rem;
+}
+
+/* Portfolio button interaction */
+.portfolio-link {
+    margin-top: 1.2rem;
+}
+
+#portfolioBtn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    color: #020617;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#portfolioBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+}
+
+#portfolioMessage {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: #e5e7eb;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+.page-footer {
+    text-align: center;
+    padding: 1rem 0 1.5rem;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .resume-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .panel::before {
+        display: none;
+    }
+}
+
+/* Keyframes */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 
 
