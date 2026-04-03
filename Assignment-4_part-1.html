@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Resume</title>
+    <link rel="stylesheet" href="resume.css">
 
-</head>
-<body>
+
+ </head>
+ <body>
     <div id="loader">
         <div class="loader-c"></div>
         <p class="loader-text"> Making my Resume</p>
@@ -18,7 +20,7 @@
         </div>
         <div class="top_text">
             <h1 class="name">Anonting Iyawe</h1>
-            <p class="line"> Aspiring IT support.. Web Developer Data Enthusiast</p>
+            <p class="line"> Aspiring IT Support • Web Developer • Data Enthusiast</p>
         </div>
          <!-- Contact info -->
           <div class="contact">
@@ -26,10 +28,118 @@
             <p>Phone: </p>
             <p> Oshawa, ON, Canada</p>
           </div>
-          
+          <!-- Social icons (small images) -->
+            <div class="social-icons">
+                <a href="#" aria-label="GitHub">
+                    <img src="images/download.png" alt="GitHub icon">
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <img src="images/LinkedIn-Logo.wine.svg" alt="LinkedIn icon">
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <img src="images/youtube.png" alt="YouTube icon">
+                </a>
+            </div>
     </header>
-    <h1> My Resume </h1>
+    <main>
+        <!-- Decorative divider -->
+        <section class="decor-line" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </section>
+
+        <section class="resume-layout">
+            <!-- Left column: skills & summary -->
+            <section class="panel panel-left">
+                <h2>Profile</h2>
+                <p>
+                    Detail‑oriented Computer Systems Technology student with hands‑on experience in
+                    IT support, web development, and data handling. Passionate about building
+                    reliable, user‑friendly solutions.
+                </p>
+                 <h2>Skills</h2>
+                <ul class="skill-list">
+                    <li>
+                        <span>HTML &amp; CSS</span>
+                        <div class="skill-bar" data-level="85"></div>
+                    </li>
+                    <li>
+                        <span>JavaScript</span>
+                        <div class="skill-bar" data-level="70"></div>
+                    </li>
+                    <li>
+                        <span>Excel &amp; Data Analysis</span>
+                        <div class="skill-bar" data-level="80"></div>
+                    </li>
+                    <li>
+                        <span>Network Fundamentals</span>
+                        <div class="skill-bar" data-level="65"></div>
+                    </li>
+                </ul>
+
+                <h2>Key Strengths</h2>
+                <ul class="pill-list">
+                    <li>Problem Solving</li>
+                    <li>Customer Service</li>
+                    <li>Documentation</li>
+                    <li>Team Collaboration</li>
+                </ul>
+            </section>
+             <!-- Right column: experience & education -->
+            <section class="panel panel-right">
+                <h2>Work Experience</h2>
+
+                <article class="card experience-card">
+                    <h3>Packaging Associate – The Great Canadian Meat</h3>
+                    <p class="meta">Oshawa, ON • 2025 – Present</p>
+                    <p>
+                        Operate packaging equipment, follow quality standards, and maintain accurate
+                        records in a fast‑paced environment.
+                    </p>
+                </article>
+
+                <article class="card experience-card">
+                    <h3>Store Manager – H.M. Boutique</h3>
+                    <p class="meta">Nigeria • 2023 – 2025</p>
+                    <p>
+                        Managed daily operations, supervised staff, and improved customer experience
+                        through organized inventory and service.
+                    </p>
+                </article>
+                 <article class="card experience-card">
+                    <h3>Sales Associate – Shoprite</h3>
+                    <p class="meta">Nigeria • 2022 – 2023</p>
+                    <p>
+                        Assisted customers, handled POS transactions, and maintained product displays
+                        to drive sales.
+                    </p>
+                </article>
+
+                <h2>Education</h2>
+
+                <article class="card">
+                    <h3>Computer Systems Technology – Diploma</h3>
+                    <p class="meta">Durham College • 2025 – Present</p>
+                </article>
+
+                <article class="card">
+                    <h3>HND &amp; OND – Mechanical Engineering</h3>
+                    <p class="meta">Auchi Polytechnic, Nigeria</p>
+                </article>
+                <!-- Optional portfolio link with hover animation -->
+                <div class="portfolio-link">
+                    <button id="portfolioBtn">View Portfolio</button>
+                    <p id="portfolioMessage" class="hidden">
+                        Portfolio coming soon – stay tuned for live projects!
+                    </p>
+                </div>
+            </section>
+        </section>
+    </main>
+      <footer class="page-footer">
+        <p>&copy; 2026 Anointing Iyawe • Interactive Resume</p>
+    </footer>
+
     
 
-</body>
+ </body>
 </html>
