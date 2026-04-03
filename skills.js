@@ -5,11 +5,12 @@
     Date: 2026-04-03
 */
 
-// When DOM is ready, set up progress animations and interactions
+// Wait for DOM to load
 document.addEventListener("DOMContentLoaded", () => {
+
     const cards = document.querySelectorAll(".skill-card");
 
-    // IntersectionObserver to animate bars when scrolled into view
+    // Scroll-triggered progress bar animation
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -25,26 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
     cards.forEach(card => {
         observer.observe(card);
 
-        // Mousemove for glow position
-        card.addEventListener("mousemove", (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty("--mouse-x", x + "px");
-            card.style.setProperty("--mouse-y", y + "px");
-        });
-                // Click-to-flip style effect: toggle a class to slightly rotate
+        // Flip card on click
         card.addEventListener("click", () => {
             card.classList.toggle("flipped");
         });
 
-        // Boost button increases level
+        // Boost Skill button
         const btn = card.querySelector(".boost-btn");
         btn.addEventListener("click", (event) => {
-            event.stopPropagation(); // avoid triggering card click
+            event.stopPropagation(); // Prevent flipping when clicking button
+
             let level = parseInt(card.getAttribute("data-level"), 10);
             level = Math.min(level + 5, 100);
-            card.setAttribute("data-level", level.toString());
+
+            card.setAttribute("data-level", level);
             const bar = card.querySelector(".progress-bar");
             bar.style.width = level + "%";
         });

@@ -6,110 +6,109 @@
 */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: system-ui, -apple-system,  "Segoe UI", sans-serif;
+    font-family: system-ui, sans-serif;
     background: radial-gradient(circle at top, #0f172a, #020617 60%);
     color: #e5e7eb;
-    min-height: 100vh;
 }
 
+/* HEADER */
 .top-header {
     text-align: center;
-    padding: 2.5rem 1rem 1.5rem;
+    padding: 2rem 1rem;
 }
 
 .top-header h1 {
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 1.8rem;
 }
 
-.top-header p {
-    margin-top: 0.6rem;
-    color: #9ca3af;
-}
-
-/* Grid layout for skills */
+/* GRID LAYOUT */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
-    padding: 0 8vw 2.5rem;
+    padding: 0 8vw 3rem;
 }
 
-/* Skill card with flip effect */
+/* CARD BASE */
 .skill-card {
-    background: rgba(15, 23, 42, 0.95);
-    border-radius: 16px;
-    padding: 1.2rem 1.3rem 1.4rem;
-    border: 1px solid rgba(148, 163, 184, 0.4);
+    perspective: 320px;
+    cursor: pointer;
+    border-radius: 10px;
     box-shadow: 0 16px 35px rgba(15, 23, 42, 0.9);
     position: relative;
-    overflow: hidden;
-    cursor: pointer;
+    padding: 20px;
+    margin-bottom: 140px;
+    
+
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
     transform-style: preserve-3d;
-    transition: transform 0.5s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* FLIP ANIMATION */
+.skill-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* CARD SIDES */
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    padding: 1.2rem;
+    border-radius: 16px;
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    backface-visibility: hidden;
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.9);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+/* PROGRESS BAR */
+.progress-wrapper {
+    width: 100%;
+    height: 10px;
+    background: rgba(30, 64, 175, 0.7);
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 1rem 0;
 }
 
 .progress-bar {
     width: 0;
     height: 100%;
-    border-radius: inherit;
     background: linear-gradient(90deg, #22c55e, #eab308);
     transition: width 1s ease-out;
 }
 
-/* Boost button */
+/* BUTTON */
 .boost-btn {
-    padding: 0.4rem 0.9rem;
-    border-radius: 999px;
+    padding: 0.5rem 1rem;
     border: none;
+    border-radius: 999px;
     background: linear-gradient(90deg, #38bdf8, #a855f7);
     color: #020617;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .boost-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
 }
 
-
-/* Simple hover glow */
-.skill-card::before {
-    content: "";
-    position: absolute;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.18), transparent 60%);
-    top: var(--mouse-y, -40px);
-    left: var(--mouse-x, -40px);
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-.skill-card:hover::before {
-    opacity: 1;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    .top-header h1 {
-        font-size: 1.4rem;
-    }
-}
-/* Slight flip animation when card is clicked */
-.skill-card.flipped {
-    transform: translateY(-4px) rotateY(6deg);
-}

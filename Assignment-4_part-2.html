@@ -8,68 +8,117 @@
     <script src="skills.js" defer></script>
 </head>
 <body>
-     <header class="top-header">
+    <header class="top-header">
         <h1>Interactive Skills Dashboard</h1>
         <p>Tracking my growth across core technology skills.</p>
     </header>
-     <main>
+
+    <main>
         <section class="skills-grid">
-            <!-- Each skill card -->
-            <article class="skill-card" data-skill="HTML & CSS" data-level="80">
-                <h2>HTML &amp; CSS</h2>
-                <p>Building responsive, accessible layouts with semantic structure and modern CSS.</p>
-                <div class="progress">
-                    <div class="progress-bar"></div>
+
+            <!-- SKILL CARD TEMPLATE -->
+            <article class="skill-card" data-level="80">
+                <div class="card-inner">
+
+                    <!-- FRONT SIDE -->
+                    <div class="card-front">
+                        <h2>HTML & CSS</h2>
+                        <p>Building responsive, accessible layouts with modern CSS.</p>
+
+                        <div class="progress-wrapper">
+                            <div class="progress-bar"></div>
+                        </div>
+
+                        <button class="boost-btn">Boost Skill</button>
+                    </div>
+
+                    <!-- BACK SIDE -->
+                    <div class="card-back">
+                        <h3>More About This Skill</h3>
+                        <p>Used to create structured, visually appealing web pages.</p>
+                    </div>
                 </div>
-                <button class="boost-btn">Boost Skill</button>
             </article>
 
-            <article class="skill-card" data-skill="JavaScript" data-level="65">
-                <h2>JavaScript</h2>
-                <p>Adding interactivity, animations, and dynamic behaviour to web pages.</p>
-                <div class="progress">
-                    <div class="progress-bar"></div>
+            <article class="skill-card" data-level="65">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>JavaScript</h2>
+                        <p>Adding interactivity and dynamic behavior to web pages.</p>
+                        <div class="progress-wrapper"><div class="progress-bar"></div></div>
+                        <button class="boost-btn">Boost Skill</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>More About This Skill</h3>
+                        <p>Used for animations, logic, and interactive UI components.</p>
+                    </div>
                 </div>
-                <button class="boost-btn">Boost Skill</button>
             </article>
 
-            <article class="skill-card" data-skill="Python" data-level="60">
-                <h2>Python</h2>
-                <p>Scripting, data processing, and automation for practical tasks.</p>
-                <div class="progress-wrapper">
-                    <div class="progress-bar"></div>
+            <article class="skill-card" data-level="60">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>Python</h2>
+                        <p>Automation, scripting, and data processing.</p>
+                        <div class="progress-wrapper"><div class="progress-bar"></div></div>
+                        <button class="boost-btn">Boost Skill</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>More About This Skill</h3>
+                        <p>Great for backend logic and data analysis.</p>
+                    </div>
                 </div>
-                <button class="boost-btn">Boost Skill</button>
             </article>
-                        <article class="skill-card" data-skill="SQL" data-level="55">
-                <h2>SQL</h2>
-                <p>Querying and managing relational data for reporting and analysis.</p>
-                <div class="progress">
-                    <div class="progress-bar"></div>
+                        <article class="skill-card" data-level="55">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>SQL</h2>
+                        <p>Querying and managing relational databases.</p>
+                        <div class="progress-wrapper"><div class="progress-bar"></div></div>
+                        <button class="boost-btn">Boost Skill</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>More About This Skill</h3>
+                        <p>Used to retrieve, filter, and analyze structured data.</p>
+                    </div>
                 </div>
-                <button class="boost-btn">Boost Skill</button>
             </article>
 
-            <article class="skill-card" data-skill="Networking" data-level="50">
-                <h2>Networking</h2>
-                <p>Understanding switches, VLANs, and basic routing concepts.</p>
-                <div class="progress">
-                    <div class="progress-bar"></div>
+            <article class="skill-card" data-level="50">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>Networking</h2>
+                        <p>Understanding switches, VLANs, and routing.</p>
+                        <div class="progress-wrapper"><div class="progress-bar"></div></div>
+                        <button class="boost-btn">Boost Skill</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>More About This Skill</h3>
+                        <p>Essential for IT support and infrastructure roles.</p>
+                    </div>
                 </div>
-                <button class="boost-btn">Boost Skill</button>
+            </article>
+            <article class="skill-card" data-level="75">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2>Excel & Data</h2>
+                        <p>PivotTables, formulas, and data cleaning.</p>
+                        <div class="progress-wrapper"><div class="progress-bar"></div></div>
+                        <button class="boost-btn">Boost Skill</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>More About This Skill</h3>
+                        <p>Used for reporting, dashboards, and analysis.</p>
+                    </div>
+                </div>
             </article>
 
-            <article class="skill-card" data-skill="Excel & Data" data-level="75">
-                <h2>Excel &amp; Data</h2>
-                <p>Using formulas, PivotTables, and data cleaning for insights.</p>
-                <div class="progress">
-                    <div class="progress-bar"></div>
-                </div>
-                <button class="boost-btn">Boost Skill</button>
-            </article>
         </section>
     </main>
 
-
 </body>
 </html>
+
+
+
+
