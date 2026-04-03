@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".skill-card");
 
     // IntersectionObserver to animate bars when scrolled into view
-    // Concept inspired by common scroll animation patterns (e.g., MDN IntersectionObserver examples).
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -25,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cards.forEach(card => {
         observer.observe(card);
+
         // Mousemove for glow position
         card.addEventListener("mousemove", (e) => {
             const rect = card.getBoundingClientRect();
@@ -33,8 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             card.style.setProperty("--mouse-x", x + "px");
             card.style.setProperty("--mouse-y", y + "px");
         });
-
-        // Click-to-flip style effect: toggle a class to slightly rotate
+                // Click-to-flip style effect: toggle a class to slightly rotate
         card.addEventListener("click", () => {
             card.classList.toggle("flipped");
         });
@@ -51,5 +50,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-
