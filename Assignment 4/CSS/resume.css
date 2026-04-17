@@ -1,0 +1,304 @@
+/*
+    Name: Anointing Iyawe
+    Course:Web Development
+    Assignment: Creative Resume (Part 1)
+    Date: 2026-04-03
+*/
+
+/* Global reset & base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e5e7eb;
+    min-height: 100vh;
+}
+/* Loader overlay */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, #1d4ed8, #020617 60%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 999;
+}
+
+.loader-c {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 4px solid rgba(248, 250, 252, 0.2);
+    border-top-color: #38bdf8;
+    animation: spin 1s linear infinite;
+}
+/* top section */
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 3rem 8vw 2rem;
+    background: radial-gradient(circle at top left, #1d4ed8 0, transparent 55%);
+}
+
+.top-photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #38bdf8;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.top-photo img:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 0 35px rgba(56, 189, 248, 0.7);
+}
+
+.top-text .name {
+    font-size: 2.4rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.tagline {
+    margin-top: 0.4rem;
+    color: #a5b4fc;
+}
+
+.contact {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.contact a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Social icons */
+.social-icons {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    filter: drop-shadow(0 0 6px rgba(15, 23, 42, 0.8));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: translateY(-3px) scale(1.05);
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.9));
+}
+
+/* Decorative line */
+.decor-line {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0 1.5rem;
+}
+
+.decor-line span {
+    width: 60px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+}
+
+/* Main layout using CSS Grid */
+.resume-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+    gap: 2rem;
+    padding: 0 8vw 3rem;
+}
+
+.panel {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 18px;
+    padding: 1.8rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative corner accent */
+.panel::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.18), transparent 60%);
+    top: -40px;
+    right: -40px;
+    pointer-events: none;
+}
+
+.panel h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #a5b4fc;
+    margin-bottom: 0.8rem;
+}
+
+.panel p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Skill bars */
+.skill-list {
+    list-style: none;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-list li {
+    margin-bottom: 0.8rem;
+}
+
+.skill-list span {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(30, 64, 175, 0.6);
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    transition: width 1.2s ease-out;
+}
+/* Pill list */
+.pill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.pill-list li {
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(30, 64, 175, 0.6);
+    font-size: 0.8rem;
+}
+
+/* Cards */
+.card {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.9);
+    border-color: #38bdf8;
+}
+
+.meta {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 0.4rem;
+}
+
+/* Portfolio button interaction */
+.portfolio-link {
+    margin-top: 1.2rem;
+}
+
+#portfolioBtn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    color: #020617;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#portfolioBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+}
+
+#portfolioMessage {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: #e5e7eb;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+.page-footer {
+    text-align: center;
+    padding: 1rem 0 1.5rem;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .resume-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .panel::before {
+        display: none;
+    }
+}
+
+/* Keyframes */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+

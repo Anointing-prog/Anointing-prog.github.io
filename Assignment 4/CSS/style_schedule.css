@@ -1,0 +1,139 @@
+/*
+NAME: Anointing Iyawe
+File name:External CSS
+Date: 27/2/2026
+External stylesheet for the schedule table
+*/
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background: linear-gradient(#16213e 50%;)
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+h1#page-title {
+    font-family: Georgia, serif;
+    font-size: 2em;
+    color: #3077d3;
+    text-align: center;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+p#subtitle {
+    text-align: center;
+    font-size: 0.85em;
+    color: #0d1116;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-family: Arial, sans-serif;
+}
+
+.table-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 3px solid #2d3a5e;
+}
+
+caption {
+    font-family: Georgia, serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #0f3460;
+    padding: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #e94560;
+}
+
+th, td {
+    border: 1px solid #2d3a5e;
+    padding: 12px 16px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.9em;
+    font-family: Arial, sans-serif;
+}
+
+tr {
+    border-bottom: 2px solid #2d3a5e;
+}
+
+thead th {
+    background-color: #0f3460;
+    color: #ffffff;
+    font-family: Georgia, serif;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 3px solid #e94560;
+    padding: 14px 16px;
+}
+
+tbody tr:hover td {
+    filter: brightness(1.15);
+    cursor: default;
+    transition: filter 0.2s ease;
+}
+
+td.break-cell {
+    background-color: #578a10;
+    color: #8a9b33;
+    font-style: italic;
+    font-size: 0.75em;
+}
+
+td.inft {
+    background-color: #0d7377;
+    color: #e0ffff;
+    font-weight: 600;
+    font-size: 0.88em;
+    border: 2px solid #14a085;
+}
+
+td.comp1218 {
+    background-color: #8b1a4a;
+    color: #ffe0ec;
+    font-weight: 600;
+    font-size: 0.88em;
+    border: 2px solid #e94560;
+}
+
+td.comp1219 {
+    background-color: #4a2080;
+    color: #ede0ff;
+    font-weight: 600;
+    font-size: 0.88em;
+    border: 2px solid #9b59b6;
+}
+
+td.gned {
+    background-color: #145a32;
+    color: #d5f5e3;
+    font-weight: 600;
+    font-size: 0.88em;
+    border: 2px solid #27ae60;
+}
+
+td.mgmt {
+    background-color: #7d5a00;
+    color: #fff8dc;
+    font-weight: 600;
+    font-size: 0.88em;
+    border: 2px solid #f39c12;
+}
