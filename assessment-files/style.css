@@ -15,8 +15,7 @@ body {
   min-width: 1024px;
   margin: 0 auto;
   font-family: 'Open Sans Condensed', sans-serif;
-  color: #2a2a2a;
-
+  background-color: rgb(221, 221, 238);
 }
 
 /* || typography */
@@ -55,7 +54,7 @@ p, li, table {
 /* || header layout */
 
 div[class="nav"], article, footer, .secondary {
-  background-color: green;
+  background-color: whitesmoke;
 }
 
 article, footer, .secondary {
@@ -68,7 +67,7 @@ article {
 
 div[class="nav"] {
   height: 50px;
-  background-color: ff80ff;
+  background-color: whitesmoke
   display: flex;
   padding: 1% 0;
   margin-bottom: 10px;
