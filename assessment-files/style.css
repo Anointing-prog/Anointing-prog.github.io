@@ -67,7 +67,7 @@ article {
 
 div[class="nav"] {
   height: 50px;
-  background-color: whitesmoke
+  background-color: ff80ff;
   display: flex;
   padding: 1% 0;
   margin-bottom: 10px;
@@ -90,7 +90,7 @@ div[class="nav"] a {
   display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: firebrick;
   color: black;
 }
 
