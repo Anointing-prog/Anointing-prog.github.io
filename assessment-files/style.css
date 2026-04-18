@@ -19,7 +19,7 @@ body {
 
 /* || typography */
 
-/* Updated to target semantic headings instead of <font> tags */
+/* headings instead of tags */
 h1, h2, h3 {
   font-family: 'Sonsie One', cursive;
   color: #2a2a2a;
