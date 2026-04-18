@@ -173,7 +173,7 @@ tbody tr:nth-child(odd) {
   background-color: #def;
 }
 
-/* styling content images and audio */
+/* styling images and audio */
 
 img, audio {
   display: block;
