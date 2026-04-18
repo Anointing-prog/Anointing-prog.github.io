@@ -54,7 +54,7 @@ p, li, table {
 
 /* || header layout */
 
-/* Changed green to white (#fff) for proper contrast and readability */
+/* Changed green to white for contrast and readability */
 nav, article, footer, .secondary {
   background-color: #fff; 
 }
